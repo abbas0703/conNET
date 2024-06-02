@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a; /* Dark gray */
+            --secondary-color: #74347c; /* Coral */
+            --accent-color: #985ba1; /* Sky Blue */
+            --background-gradient-start: #1a1a1a; /* Dark gray */
+            --background-gradient-end: #121212; /* Even darker gray */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1f1f1f; /* Slightly lighter than primary color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 5px 0;
+        }
+
+        .btn.start {
+            background-color: var(--secondary-color);
+        }
+
+        .btn.edit {
+            background-color: var(--accent-color);
+        }
+
+        .btn.check {
+            background-color: var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Interactive Experience</h1>
+    </header>
+    <div class="content">
+        <div class="box">
+            <div class="button-container">
+                <a href="./startcode.html" target="_parent" class="btn start">Start</a>
+                <a href="./editcode.html" target="rightframe" class="btn edit">Edit</a>
+                <a href="./chat.html" target="rightframe" class="btn check">Check</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a; /* Dark gray */
+            --secondary-color: #262b2e; /* Coral */
+            --accent-color: #051c28; /* Sky Blue */
+            --background-gradient-start: #1a1a1a; /* Dark gray */
+            --background-gradient-end: #121212; /* Even darker gray */
+            --button-hover: #333333; /* Slightly lighter gray for hover effect */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+        }
+
+        .container {
+            text-align: center;
+            color: white; /* Ensuring text is visible on dark background */
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ffffff; /* White color for heading */
+        }
+
+        .options {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .option {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: var(--secondary-color); /* Using the secondary color for buttons */
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: var(--button-hover); /* Slightly lighter gray for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Your Skills</h1>
+        <div class="options">
+            <button class="option" onclick="navigate('add')">Add Skills</button>
+            <button class="option" onclick="navigate('edit')">Edit Skills</button>
+        </div>
+    </div>
+
+    <script>
+        function navigate(option) {
+            switch(option) {
+                case 'add':
+                    window.location.href = "add_skills.html";
+                    break;
+                case 'edit':
+                    window.location.href = "edit_skills.html";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

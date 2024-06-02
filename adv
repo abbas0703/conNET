@@ -1,0 +1,24 @@
+
+
+
+
+
+import { PrettyChatWindow } from 'react-chat-engine-pretty'
+const ChatsPage = (props) => {
+    const chatProps = useMultiChatLogic(
+        'beceaeca-4ce7-49a3-bca0-cffef45c2312', 
+        props.user.username, 
+        props.user.secret
+    );
+    return (
+    <div style={{ height: '100vh'}}>
+        <PrettyChatWindow
+            projectId='beceaeca-4ce7-49a3-bca0-cffef45c2312'
+            username={props.user.username}
+            secret={props.user.secret}
+            style={{ height: '100%'}}
+        />
+    </div>
+    )
+}
+export default ChatsPage
